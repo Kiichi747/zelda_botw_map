@@ -11,7 +11,7 @@
     var layer = L.tileLayer('Content/Map/{z}_{x}_{y}.png', {
         attribution: '&copy; David',
         minZoom: 2,
-        maxZoom: 7,
+        maxZoom: 8,
         noWrap: true,
         bounds: bounds
     }).addTo(map);
