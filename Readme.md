@@ -8,4 +8,4 @@ Because IE and Edge not allows you to access a local storage object, these offli
 
 The map images are downloaded from [zeldamaps.com](https://zeldamaps.com/?game=BotW), and location data are from [IGN](www.ign.com/wikis/the-legend-of-zelda/Maps) and [zeldamaps.com](https://zeldamaps.com/?game=BotW). 
 
-If you are interest in this project, you can folk for commit your code or data to update it.
+If you are interest in this project, you can fork for commit your code or data to update it.
