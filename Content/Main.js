@@ -72,7 +72,7 @@
         "1905": "rgb(255,206,6)",
     };
     var listContainer = $("#TypeSwitch ul");
-    //$("<li>").attr("data-type", "all").text("全部").appendTo(listContainer);
+    $("<li>").attr("data-type", "all").text("全部").appendTo(listContainer);
     $("<li>").attr("data-type", "none").text("無").appendTo(listContainer);
     $.each(MarkerCatalog, function () {
         var name = this.name;
