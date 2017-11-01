@@ -1,15 +1,4 @@
-﻿@font-face {
-  font-family: 'icomoon';
-  src: url('icomoon.eot');
-  src: url('icomoon.eot#iefix') format('embedded-opentype'), url('icomoon.ttf') format('truetype'), url('icomoon.woff') format('woff'), url('icomoon.svg#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: HyliaSerif;
-  src: url("HyliaSerifBeta-Regular.otf") format("opentype");
-}
-.base-marker-icon {
+﻿.base-marker-icon {
   font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
@@ -20,98 +9,154 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-BotW_Great-Fairy:before {
-  content: "\e91a";
+@font-face {
+  font-family: 'icomoon';
+  src: url('icomoon.eot?cibvmj');
+  src: url('icomoon.eot?cibvmj#iefix') format('embedded-opentype'), url('icomoon.ttf?cibvmj') format('truetype'), url('icomoon.woff?cibvmj') format('woff'), url('icomoon.svg?cibvmj#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
-.icon-BotW_Stables:before {
-  content: "\e91c";
+.icon-BotW_Cooking_Pot:before {
+  content: "\e921";
 }
-.icon-Button:before {
-  content: "\e915";
+.icon-BotW_Goddess_Statue:before {
+  content: "\e922";
 }
-.icon-BotW_Korok-Seeds:before {
-  content: "\e91b";
+.icon-BotW_Hinox:before {
+  content: "\e923";
 }
-.icon-BotW_Dungeon:before {
-  content: "\e916";
+.icon-BotW_Lynel:before {
+  content: "\e924";
 }
-.icon-BotW_Farm:before {
-  content: "\e917";
+.icon-BotW_Wizzrobe:before {
+  content: "\e925";
 }
-.icon-BotW_The-Temple-of-Time:before {
-  content: "\e918";
-}
-.icon-BotW_Village:before {
-  content: "\e919";
-}
-.icon-BotW_Weapons:before {
+.icon-BotW_Armor:before {
   content: "\e900";
 }
-.icon-BotW_Tower-of-Resurrection:before {
+.icon-BotW_Beef:before {
   content: "\e901";
 }
-.icon-BotW_Shrines:before {
+.icon-BotW_Blupee:before {
   content: "\e902";
 }
-.icon-BotW_Shrine-of-Resurrection:before {
+.icon-BotW_Boss:before {
   content: "\e903";
 }
-.icon-BotW_Shields:before {
+.icon-BotW_Bow-n-Arrows:before {
   content: "\e904";
 }
-.icon-BotW_Points-of-Interest:before {
+.icon-BotW_Dungeon:before {
   content: "\e905";
 }
-.icon-BotW_Mushroom:before {
+.icon-BotW_Enemies:before {
   content: "\e906";
 }
-.icon-BotW_Meat:before {
+.icon-BotW_Enemy-Camp:before {
   content: "\e907";
 }
-.icon-BotW_Materials:before {
+.icon-BotW_Equipment:before {
   content: "\e908";
 }
-.icon-BotW_Locations:before {
+.icon-BotW_Fish:before {
   content: "\e909";
 }
-.icon-BotW_Items:before {
+.icon-BotW_Food-n-Materials:before {
   content: "\e90a";
 }
-.icon-BotW_Herb:before {
+.icon-BotW_Great-Fairy:before {
   content: "\e90b";
 }
 .icon-BotW_Guardian:before {
   content: "\e90c";
 }
-.icon-BotW_Fish:before {
+.icon-BotW_Herbs:before {
   content: "\e90d";
 }
-.icon-BotW_Equipment:before {
+.icon-BotW_Items:before {
   content: "\e90e";
 }
-.icon-BotW_Enemy-Camp:before {
+.icon-BotW_Korok-Seeds:before {
   content: "\e90f";
 }
-.icon-BotW_Enemies:before {
+.icon-BotW_Locations:before {
   content: "\e910";
 }
-.icon-BotW_Bow-n-Arrows:before {
+.icon-BotW_Memories:before {
   content: "\e911";
 }
-.icon-BotW_Boss:before {
+.icon-BotW_Mini-Game:before {
   content: "\e912";
 }
-.icon-BotW_Armor:before {
+.icon-BotW_Mushrooms:before {
   content: "\e913";
 }
-.icon-film:before {
-  content: "\f008";
+.icon-BotW_Points-of-Interest:before {
+  content: "\e914";
 }
-.icon-bomb:before {
+.icon-BotW_Sheikah-Tower:before {
+  content: "\e915";
+}
+.icon-BotW_Shields:before {
+  content: "\e916";
+}
+.icon-BotW_Shrine-Quest:before {
+  content: "\e917";
+}
+.icon-BotW_Shrines-of-Trials:before {
+  content: "\e918";
+}
+.icon-BotW_Side-Quest:before {
+  content: "\e919";
+}
+.icon-BotW_Stables:before {
+  content: "\e91a";
+}
+.icon-BotW_Treasure-Chest:before {
+  content: "\e91b";
+}
+.icon-BotW_Village:before {
+  content: "\e91c";
+}
+.icon-BotW_Weapons:before {
+  content: "\e91e";
+}
+.icon-BotW_Bomb:before {
   content: "\e91d";
 }
-.icon-bubble2:before {
-  content: "\e96e";
+.icon-pencil:before {
+  content: "\e91f";
+}
+.icon-BotW_Book:before {
+  content: "\e920";
+}
+.icon-search:before {
+  content: "\e986";
+}
+.icon-link:before {
+  content: "\e9cb";
+}
+.icon-cross:before {
+  content: "\ea0f";
+}
+.icon-checkmark:before {
+  content: "\ea10";
+}
+.icon-checkbox-checked:before {
+  content: "\ea10";
+}
+.icon-checkbox-unchecked:before {
+  content: "\ea11";
+}
+.icon-checkbox-checked2:before {
+  content: "\ea52";
+}
+.icon-checkbox-unchecked2:before {
+  content: "\ea53";
+}
+@font-face {
+  font-family: HyliaSerif;
+  src: url("HyliaSerifBeta-Regular.otf") format("opentype");
 }
 html,
 body {
@@ -158,63 +203,15 @@ body {
 #MapContainer .leaflet-marker-pane .marked:before {
   color: #999;
 }
-.icon-BotW_Great-Fairy,
-.icon-BotW_Great-Fairy:after {
-  background-color: #e44ee3;
-}
-.icon-BotW_Korok-Seeds,
-.icon-BotW_Korok-Seeds:after {
-  background-color: #37b500;
-}
-.icon-film,
-.icon-film:after {
-  background-color: #02c7ff;
-}
-.icon-BotW_Boss,
-.icon-BotW_Boss:after {
-  background-color: #c20e0e;
-}
-.icon-bubble2,
-.icon-bubble2:after {
-  background-color: #2c83cc;
-}
-.icon-BotW_Shrines,
-.icon-BotW_Shrines:after {
-  background-color: #0082c4;
-}
-.icon-BotW_Stables,
-.icon-BotW_Stables:after {
-  background-color: #d78b06;
-}
-.icon-BotW_Tower-of-Resurrection,
-.icon-BotW_Tower-of-Resurrection:after {
-  background-color: #24d8d8;
-}
-.icon-BotW_Village,
-.icon-BotW_Village:after {
-  background-color: #f08200;
-}
-.icon-BotW_Weapons,
-.icon-BotW_Weapons:after {
-  background-color: #ffce06;
-}
-.icon-BotW_Bow-n-Arrows,
-.icon-BotW_Bow-n-Arrows:after {
-  background-color: #ffce06;
-}
-.icon-BotW_Shields,
-.icon-BotW_Shields:after {
-  background-color: #ffce06;
-}
-.icon-BotW_Armor,
-.icon-BotW_Armor:after {
-  background-color: #ffce06;
-}
 #TypeSwitch {
   position: fixed;
   top: 10px;
   right: 10px;
   z-index: 999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 #TypeSwitch strong {
   font-size: 14px;
@@ -229,11 +226,25 @@ body {
 #TypeSwitch > ul {
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.8);
-  overflow: hidden;
-  max-height: 0px;
+  overflow-y: auto;
   transition: all ease-in 0.5s;
   margin: 0;
   padding: 0;
+  position: fixed;
+  right: 10px;
+  top: 50px;
+  max-height: 0;
+}
+#TypeSwitch > ul::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+#TypeSwitch > ul::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+#TypeSwitch > ul::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 #TypeSwitch > ul > li {
   margin: 0;
@@ -248,6 +259,7 @@ body {
   transition: all ease-in 0.2s;
   background-color: transparent;
   position: relative;
+  white-space: nowrap;
 }
 #TypeSwitch > ul > li:after {
   content: " ";
@@ -258,7 +270,8 @@ body {
   width: 6px;
   border-radius: 50%;
 }
-#TypeSwitch > ul > li:hover {
+#TypeSwitch > ul > li:hover,
+#TypeSwitch > ul > li:active {
   background-color: rgba(255, 255, 255, 0.2);
 }
 #TypeSwitch > ul > li.current {
@@ -290,13 +303,16 @@ body {
 #TypeSwitch > ul > li.title.current {
   background-color: transparent;
 }
+#TypeSwitch:hover {
+  height: 50%;
+}
 #TypeSwitch:hover ul {
-  max-height: 1000px;
+  max-height: 90%;
 }
 #NameSearch {
   position: fixed;
   top: 10px;
-  right: 240px;
+  right: 110px;
   z-index: 999;
   background-color: #000;
   border-radius: 5px;
@@ -313,7 +329,7 @@ body {
   background-color: transparent;
   outline: none;
   color: #fff;
-  width: 160px;
+  width: 140px;
 }
 #NameSearch input::placeholder {
   color: #666;
@@ -357,6 +373,10 @@ body {
   text-decoration: underline;
   cursor: pointer;
   margin-right: 10px;
+}
+.popupContainer .buttonContainer a.markButton.important,
+.popupContainer .buttonContainer span.markButton.important {
+  color: #e6411c;
 }
 .popupContainer .buttonContainer a:hover,
 .popupContainer .buttonContainer span:hover {

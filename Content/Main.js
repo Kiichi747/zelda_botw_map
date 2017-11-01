@@ -13,7 +13,8 @@
         minZoom: 2,
         maxZoom: 8,
         noWrap: true,
-        bounds: bounds
+        bounds: bounds,
+        detectRetina: true
     }).addTo(map);
 
 
@@ -21,28 +22,67 @@
     var visibleMarker = {};
     var css = "";
     var typeChinese = {
-        "quest": "任务",
-        "miniboss": "头目",
-        "treasure": "宝箱",
-        "shrine": "神庙",
-        "stable": "马宿",
-        "tower": "塔",
-        "town": "城镇",
-        "great-fairy-fountain": "大精灵",
-        "korok-seed": "种子",
-        "memory": "记忆",
+        "1901": "興趣點",
+        "1934": "回憶拍照",
+        "1935": "支線任務",
+        "1936": "破裂的牆",
+        "1946": "日記與書籍",
+        "1948": "烹飪鍋",
+        "1949": "女神像",
+        "1902": "裝備",
+        "1903": "武器",
+        "1904": "弓與箭",
+        "1905": "盾牌",
+        "1944": "寶箱(裝備)",
+        "1910": "道具",
+        "1916": "種子(Korok)",
+        "1943": "寶箱(非裝備)",
+        "1945": "寶石精靈(Blupee)",
+        "1920": "地標",
+        "1921": "村莊",
+        "1923": "Sheikah高塔",
+        "1925": "祠(神廟)",
+        "1926": "神獸",
+        "1937": "大精靈",
+        "1938": "馬宿",
+        "1930": "怪物",
+        "1931": "怪物營地",
+        "1932": "守護者(Guardian)",
+        "1939": "巫師(Wizzrobe)",
+        "1940": "頭目(半人馬Lynel)",
+        "1941": "頭目(Talus)",
+        "1942": "頭目(Hinox)",
+        "1947": "頭目(Molduga)",
     }
+    var typeColor = {
+        "1937": "rgb(228,78,227)",
+        "1916": "rgb(55,181,0)",
+        "1934": "rgb(2,199,255)",
+        "1940": "rgb(194,14,14)",
+        "1941": "rgb(194,14,14)",
+        "1942": "rgb(194,14,14)",
+        "1947": "rgb(194,14,14)",
+        "1935": "rgb(44,131,204)",
+        "1925": "rgb(0,130,196)",
+        "1938": "rgb(215,139,6)",
+        "1923": "rgb(36,216,216)",
+        "1921": "rgb(240,130,0)",
+        "1903": "rgb(255,206,6)",
+        "1904": "rgb(255,206,6)",
+        "1905": "rgb(255,206,6)",
+    };
     var listContainer = $("#TypeSwitch ul");
-    $("<li>").attr("data-type", "all").text("全部").appendTo(listContainer);
-    $("<li>").attr("data-type", "none").text("无").appendTo(listContainer);
+    //$("<li>").attr("data-type", "all").text("全部").appendTo(listContainer);
+    $("<li>").attr("data-type", "none").text("無").appendTo(listContainer);
     $.each(MarkerCatalog, function () {
         var name = this.name;
-        $("<li>").text(typeChinese[name] || name).appendTo(listContainer).addClass("title");
+        $("<li>").text(typeChinese[this.id] || name).appendTo(listContainer).addClass("title");
         $.each(this.children, function () {
             var name = this.name;
-            $("<li>").attr("data-type", this.id).text(typeChinese[name] || name).appendTo(listContainer).addClass("icon-" + this.img);
+            $("<li>").attr("data-type", this.id).text(typeChinese[this.id] || name).appendTo(listContainer).addClass("icon-" + this.img);
             markerStyle[this.id] = this.img;
             visibleMarker[this.id] = false;
+            this.color = typeColor[this.id] || this.color;
             css += '.icon-' + this.img + ', .icon-' + this.img + ':after {background-color:' + this.color + ';}';
         });
     });
@@ -128,10 +168,15 @@
                 popupHtml += '<strong class="name">' + this.name + '</strong>';
                 popupHtml += '<div class="buttonContainer">';
                 popupHtml += '<span class="markButton" onclick="MarkPoint(this)" data-key="' + key + '">标记</span>';
+                popupHtml += '<span class="markButton" onclick="CopyName(\'' + this.name + '\')">复制</span>';
                 popupHtml += '<a class="markButton" target="_blank" href="http://www.ign.com/search?q=' + encodeURIComponent(this.name) + '">IGN</a>';
                 popupHtml += '<a class="markButton" target="_blank" href="http://www.polygon.com/search?q=' + encodeURIComponent(this.name) + '">Polygon</a>';
-                popupHtml += '<a class="markButton" target="_blank" href="https://c.gufen.ga/#q=' + encodeURIComponent(this.name) + '">Google</a>';
+                popupHtml += '<a class="markButton" target="_blank" href="https://www.google.com/#q=' + encodeURIComponent(this.name) + '">Google</a>';
                 popupHtml += '<a class="markButton" target="_blank" href="http://www.baidu.com/baidu?word=' + encodeURIComponent(this.name) + '">百度</a>';
+                if (ShrinesVideo[this.name]) {
+                    popupHtml += '<a class="markButton important" target="_blank" href="' + ShrinesVideo[this.name] + '">教程</a>';
+                }
+
                 popupHtml += '</div>';
 
                 if (this.markerCategoryId === "1925") {
@@ -139,9 +184,10 @@
                         var jName = ShrinesToJapanese[this.name];
                         popupHtml += '<strong class="name">' + jName + '</strong>';
                         popupHtml += '<div class="buttonContainer">';
+                        popupHtml += '<span class="markButton" onclick="CopyName(\'' + jName + '\')">复制</span>';
                         popupHtml += '<a class="markButton" target="_blank" href="https://zelda-bow.gamepedia.jp/?s=' + jName + '">GamePedia</a>';
                         popupHtml += '<a class="markButton" target="_blank" href="http://wiki2.h1g.jp/zelda_bow/index.php?' + jName + '">H1G</a>';
-                        popupHtml += '<a class="markButton" target="_blank" href="https://c.gufen.ga/#q=' + jName + '">Google</a>';
+                        popupHtml += '<a class="markButton" target="_blank" href="https://www.google.com/#q=' + jName + '">Google</a>';
                         popupHtml += '<a class="markButton" target="_blank" href="http://www.baidu.com/baidu?word=' + jName + '">百度</a>';
                         popupHtml += '</div>';
                     } else {
@@ -204,6 +250,10 @@ function MarkPoint(element) {
 
 }
 
+function CopyName(text) {
+    prompt("請手動複製以下文字", text);
+
+}
 
 //$(function () {
 //    localStorage.clear();
